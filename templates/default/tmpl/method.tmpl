@@ -18,12 +18,14 @@ var self = this;
     <?js } ?>
 
     <?js if (kind === 'event' && data.type && data.type.names) {?>
-        <h5>Type:</h5>
-        <ul>
-            <li>
-                <?js= self.partial('type.tmpl', data.type.names) ?>
-            </li>
-        </ul>
+        <dl>
+            <dt>
+                Type
+            </dt>
+            <dd>
+                <?js= this.partial('type.tmpl', data.type.names) ?>
+            </dd>
+        </dl>
     <?js } ?>
     
     <?js if (data['this']) { ?>
